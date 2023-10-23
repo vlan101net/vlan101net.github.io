@@ -1,6 +1,6 @@
 # Setup
-title: Dark Poole
-url: https://getpoole.com
+title: vlan101.net
+url: https://vlan101.net
 paginate: 1
 baseurl: ""
 permalink: pretty
@@ -32,9 +32,9 @@ sass:
 
 # Specify the author for blog posts
 author:
-  name: Mark Otto
-  url: https://twitter.com/mdo
-  email: markdotto@gmail.com
+  name: Stephen Santos
+  url: https://twitter.com/vlan101net
+  email: stephen.santos@gmail.com
 
 # Custom vars
 version: 3.0.0
