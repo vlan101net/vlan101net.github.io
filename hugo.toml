@@ -2,3 +2,7 @@ baseURL = 'https://vlan101.net/'
 languageCode = 'en-us'
 title = 'vlan101.net'
 theme = 'tailwind'
+
+[caches]
+  [caches.images]
+    dir = ':cacheDir/images'
