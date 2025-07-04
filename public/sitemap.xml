@@ -8,6 +8,38 @@
     <loc>https://vlan101.net/</loc>
     <lastmod>2025-07-03T13:34:33-05:00</lastmod>
   </url><url>
+    <loc>https://vlan101.net/manifest.json</loc>
+  </url><url>
+    <loc>https://vlan101.net/search/_index.de/</loc>
+    <priority>0.1</priority>
+  </url><url>
+    <loc>https://vlan101.net/search/</loc>
+    <priority>0.1</priority>
+  </url><url>
+    <loc>https://vlan101.net/search/_index.es/</loc>
+    <priority>0.1</priority>
+  </url><url>
+    <loc>https://vlan101.net/search/_index.fr/</loc>
+    <priority>0.1</priority>
+  </url><url>
+    <loc>https://vlan101.net/search/_index.hi/</loc>
+    <priority>0.1</priority>
+  </url><url>
+    <loc>https://vlan101.net/search/_index.jp/</loc>
+    <priority>0.1</priority>
+  </url><url>
+    <loc>https://vlan101.net/search/_index.nl/</loc>
+    <priority>0.1</priority>
+  </url><url>
+    <loc>https://vlan101.net/search/_index.pl/</loc>
+    <priority>0.1</priority>
+  </url><url>
+    <loc>https://vlan101.net/search/_index.ru/</loc>
+    <priority>0.1</priority>
+  </url><url>
+    <loc>https://vlan101.net/search/_index.zh-cn/</loc>
+    <priority>0.1</priority>
+  </url><url>
     <loc>https://vlan101.net/categories/</loc>
   </url><url>
     <loc>https://vlan101.net/tags/</loc>

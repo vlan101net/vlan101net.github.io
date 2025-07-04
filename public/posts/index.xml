@@ -6,6 +6,8 @@
     <description>Recent content in Posts on vlan101.net</description>
     <generator>Hugo</generator>
     <language>en-us</language>
+    <managingEditor>user@example.com (Hugo Author)</managingEditor>
+    <webMaster>user@example.com (Hugo Author)</webMaster>
     <lastBuildDate></lastBuildDate>
     <atom:link href="https://vlan101.net/posts/index.xml" rel="self" type="application/rss+xml" />
   </channel>
