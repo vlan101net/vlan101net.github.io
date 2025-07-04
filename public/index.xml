@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>vlan101.net</title>
-    <link>https://vlan101.net/</link>
+    <link>http://localhost:1313/</link>
     <description>Recent content on vlan101.net</description>
     <generator>Hugo</generator>
     <language>en-us</language>
@@ -10,82 +10,89 @@
     <webMaster>user@example.com (Hugo Author)</webMaster>
     <copyright>Stephen Santos</copyright>
     <lastBuildDate>Thu, 03 Jul 2025 13:34:33 -0500</lastBuildDate>
-    <atom:link href="https://vlan101.net/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>About Me</title>
-      <link>https://vlan101.net/about/about/</link>
+      <link>http://localhost:1313/about/about/</link>
       <pubDate>Thu, 03 Jul 2025 13:34:33 -0500</pubDate><author>user@example.com (Hugo Author)</author>
-      <guid>https://vlan101.net/about/about/</guid>
+      <guid>http://localhost:1313/about/about/</guid>
       <description>&lt;p&gt;Father, network engineer, coach.&lt;/p&gt;</description>
     </item>
     <item>
+      <title>My First Post</title>
+      <link>http://localhost:1313/posts/my-first-post/</link>
+      <pubDate>Thu, 03 Jul 2025 13:34:33 -0500</pubDate><author>user@example.com (Hugo Author)</author>
+      <guid>http://localhost:1313/posts/my-first-post/</guid>
+      <description>&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;&#xA;&lt;p&gt;This is &lt;strong&gt;bold&lt;/strong&gt; text, and this is &lt;em&gt;emphasized&lt;/em&gt; text.&lt;/p&gt;&#xA;&lt;p&gt;Visit the &lt;a href=&#34;https://gohugo.io&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Hugo&lt;/a&gt;&#xA; website!&lt;/p&gt;</description>
+    </item>
+    <item>
       <title></title>
-      <link>https://vlan101.net/manifest.json</link>
+      <link>http://localhost:1313/manifest.json</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><author>user@example.com (Hugo Author)</author>
-      <guid>https://vlan101.net/manifest.json</guid>
+      <guid>http://localhost:1313/manifest.json</guid>
       <description></description>
     </item>
     <item>
       <title></title>
-      <link>https://vlan101.net/search/_index.de/</link>
+      <link>http://localhost:1313/search/_index.de/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><author>user@example.com (Hugo Author)</author>
-      <guid>https://vlan101.net/search/_index.de/</guid>
+      <guid>http://localhost:1313/search/_index.de/</guid>
       <description></description>
     </item>
     <item>
       <title></title>
-      <link>https://vlan101.net/search/_index.es/</link>
+      <link>http://localhost:1313/search/_index.es/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><author>user@example.com (Hugo Author)</author>
-      <guid>https://vlan101.net/search/_index.es/</guid>
+      <guid>http://localhost:1313/search/_index.es/</guid>
       <description></description>
     </item>
     <item>
       <title></title>
-      <link>https://vlan101.net/search/_index.fr/</link>
+      <link>http://localhost:1313/search/_index.fr/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><author>user@example.com (Hugo Author)</author>
-      <guid>https://vlan101.net/search/_index.fr/</guid>
+      <guid>http://localhost:1313/search/_index.fr/</guid>
       <description></description>
     </item>
     <item>
       <title></title>
-      <link>https://vlan101.net/search/_index.hi/</link>
+      <link>http://localhost:1313/search/_index.hi/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><author>user@example.com (Hugo Author)</author>
-      <guid>https://vlan101.net/search/_index.hi/</guid>
+      <guid>http://localhost:1313/search/_index.hi/</guid>
       <description></description>
     </item>
     <item>
       <title></title>
-      <link>https://vlan101.net/search/_index.jp/</link>
+      <link>http://localhost:1313/search/_index.jp/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><author>user@example.com (Hugo Author)</author>
-      <guid>https://vlan101.net/search/_index.jp/</guid>
+      <guid>http://localhost:1313/search/_index.jp/</guid>
       <description></description>
     </item>
     <item>
       <title></title>
-      <link>https://vlan101.net/search/_index.nl/</link>
+      <link>http://localhost:1313/search/_index.nl/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><author>user@example.com (Hugo Author)</author>
-      <guid>https://vlan101.net/search/_index.nl/</guid>
+      <guid>http://localhost:1313/search/_index.nl/</guid>
       <description></description>
     </item>
     <item>
       <title></title>
-      <link>https://vlan101.net/search/_index.pl/</link>
+      <link>http://localhost:1313/search/_index.pl/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><author>user@example.com (Hugo Author)</author>
-      <guid>https://vlan101.net/search/_index.pl/</guid>
+      <guid>http://localhost:1313/search/_index.pl/</guid>
       <description></description>
     </item>
     <item>
       <title></title>
-      <link>https://vlan101.net/search/_index.ru/</link>
+      <link>http://localhost:1313/search/_index.ru/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><author>user@example.com (Hugo Author)</author>
-      <guid>https://vlan101.net/search/_index.ru/</guid>
+      <guid>http://localhost:1313/search/_index.ru/</guid>
       <description></description>
     </item>
     <item>
       <title></title>
-      <link>https://vlan101.net/search/_index.zh-cn/</link>
+      <link>http://localhost:1313/search/_index.zh-cn/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><author>user@example.com (Hugo Author)</author>
-      <guid>https://vlan101.net/search/_index.zh-cn/</guid>
+      <guid>http://localhost:1313/search/_index.zh-cn/</guid>
       <description></description>
     </item>
   </channel>
