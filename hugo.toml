@@ -13,7 +13,7 @@ theme = 'tailwind'
   contentTypeName = 'posts'
 
   [param.header]
-    logo = 'logo.png'
+    logo = 'icon.png'
     title = ''
 
   [param.footer]
