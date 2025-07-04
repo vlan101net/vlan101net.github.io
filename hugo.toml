@@ -1,7 +1,43 @@
 baseURL = 'https://vlan101.net/'
-languageCode = 'en-us'
 title = 'vlan101.net'
+author = 'Stephen Santos'
+copyright = 'Stephen Santos'
+pagination.pagerSize = 5
+languageCode = 'en-us'
 theme = 'tailwind'
+
+[markup]
+  _merge = "deep"
+
+[params]
+  contentTypeName = 'posts'
+
+  [param.header]
+    logo = 'img/logo.png'
+    title = ''
+
+  [param.footer]
+    since = 2025
+    poweredby = true
+
+[menu]
+
+  [[menu.main]]
+    indentifier = 'post'
+    name = 'Post'
+    pageRef = '/posts'
+    weight = 10
+
+  [[menu.main]]
+    identifier = 'about'
+    name = 'About'
+    pageRef = '/about'
+    weight = 20
+
+[taxonomies]
+category = 'categories'
+tag = 'tags'
+series = 'series'
 
 [caches]
   [caches.images]

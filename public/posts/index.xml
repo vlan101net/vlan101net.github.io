@@ -8,6 +8,7 @@
     <language>en-us</language>
     <managingEditor>user@example.com (Hugo Author)</managingEditor>
     <webMaster>user@example.com (Hugo Author)</webMaster>
+    <copyright>Stephen Santos</copyright>
     <lastBuildDate></lastBuildDate>
     <atom:link href="https://vlan101.net/posts/index.xml" rel="self" type="application/rss+xml" />
   </channel>
