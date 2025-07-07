@@ -43,6 +43,9 @@ defaultContentLanguage = "en"           # Default language to use
   identifier = "tags"
   pageref = "/tags/"
 
+[caches]
+  [caches.images]
+    dir = ':cacheDir/images'
 
 [params]
   since = "2025"            # Site creation time          # 站点建立时间
