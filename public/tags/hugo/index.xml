@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Hugo on vlan101.net - Rambling of a Network Engineer</title>
+    <link>https://vlan101.net/tags/hugo/</link>
+    <description>Recent content in Hugo on vlan101.net - Rambling of a Network Engineer</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <managingEditor>stephen.santos@vlan101.net (Stephen Santos)</managingEditor>
+    <webMaster>stephen.santos@vlan101.net (Stephen Santos)</webMaster>
+    <lastBuildDate>Sat, 20 Jan 2024 00:00:00 +0000</lastBuildDate>
+    
+        <atom:link href="https://vlan101.net/tags/hugo/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Customize Category Names</title>
+      <link>https://vlan101.net/post/docs/customize-category-names/</link>
+      <pubDate>Sat, 20 Jan 2024 00:00:00 +0000</pubDate>
+      <author>stephen.santos@vlan101.net (Stephen Santos)</author>
+      <guid>https://vlan101.net/post/docs/customize-category-names/</guid>
+      
+        <description>&lt;h2 id=&#34;customizing-category-names&#34;&gt;Customizing Category Names&lt;/h2&gt;
+&lt;p&gt;The theme allows you to customize category display names and supports both single language and multilingual configurations.&lt;/p&gt;
+&lt;h3 id=&#34;setup-steps&#34;&gt;Setup Steps&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;Create a &lt;code&gt;data/categories.yaml&lt;/code&gt; file in your site root directory&lt;/li&gt;
+&lt;li&gt;Choose either single language or multilingual format&lt;/li&gt;
+&lt;li&gt;Configure your categories with display names and weights&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;single-language-configuration&#34;&gt;Single Language Configuration&lt;/h3&gt;
+&lt;p&gt;For single language sites, use this simple format:&lt;/p&gt;
+&lt;div class=&#34;highlight-container&#34;&gt;
+
+  &lt;button class=&#34;copy-code-btn outline&#34;&gt;Copy&lt;/button&gt;
+
+  
+  &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-yaml:data/categories.yaml&#34; data-lang=&#34;yaml:data/categories.yaml&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# Single language format&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;index&lt;/span&gt;:
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#f92672&#34;&gt;name&lt;/span&gt;: &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Computer Technology&amp;#34;&lt;/span&gt;  &lt;span style=&#34;color:#75715e&#34;&gt;# Display name for the category&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#f92672&#34;&gt;weight&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;10&lt;/span&gt;                  &lt;span style=&#34;color:#75715e&#34;&gt;# Lower weight appears first in navigation&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;docs&lt;/span&gt;:
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#f92672&#34;&gt;name&lt;/span&gt;: &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Programming&amp;#34;&lt;/span&gt;         &lt;span style=&#34;color:#75715e&#34;&gt;# Custom display name&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#f92672&#34;&gt;weight&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;2&lt;/span&gt;                  &lt;span style=&#34;color:#75715e&#34;&gt;# Sorting weight&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;h3 id=&#34;multilingual-configuration&#34;&gt;Multilingual Configuration&lt;/h3&gt;
+&lt;p&gt;For multilingual sites, use this format:&lt;/p&gt;
+&lt;div class=&#34;highlight-container&#34;&gt;
+
+  &lt;button class=&#34;copy-code-btn outline&#34;&gt;Copy&lt;/button&gt;
+
+  
+  &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-yaml:data/categories.yaml&#34; data-lang=&#34;yaml:data/categories.yaml&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# Multilingual format&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;index&lt;/span&gt;:
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#f92672&#34;&gt;name&lt;/span&gt;:
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#f92672&#34;&gt;zh&lt;/span&gt;: &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;计算机技术&amp;#34;&lt;/span&gt;              &lt;span style=&#34;color:#75715e&#34;&gt;# Chinese display name&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#f92672&#34;&gt;en&lt;/span&gt;: &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Computer Technology&amp;#34;&lt;/span&gt;    &lt;span style=&#34;color:#75715e&#34;&gt;# English display name&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#f92672&#34;&gt;fr&lt;/span&gt;: &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Technologie&amp;#34;&lt;/span&gt;           &lt;span style=&#34;color:#75715e&#34;&gt;# French display name&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#f92672&#34;&gt;default&lt;/span&gt;: &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Technology&amp;#34;&lt;/span&gt;        &lt;span style=&#34;color:#75715e&#34;&gt;# Fallback when language not found&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#f92672&#34;&gt;weight&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;10&lt;/span&gt;                    &lt;span style=&#34;color:#75715e&#34;&gt;# Sorting weight (lower appears first)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;docs&lt;/span&gt;:
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#f92672&#34;&gt;name&lt;/span&gt;:
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#f92672&#34;&gt;zh&lt;/span&gt;: &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;文档&amp;#34;&lt;/span&gt;                   &lt;span style=&#34;color:#75715e&#34;&gt;# Chinese name&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#f92672&#34;&gt;en&lt;/span&gt;: &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Documentation&amp;#34;&lt;/span&gt;         &lt;span style=&#34;color:#75715e&#34;&gt;# English name&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#f92672&#34;&gt;fr&lt;/span&gt;: &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Documentation&amp;#34;&lt;/span&gt;         &lt;span style=&#34;color:#75715e&#34;&gt;# French name&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#f92672&#34;&gt;default&lt;/span&gt;: &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Documentation&amp;#34;&lt;/span&gt;    &lt;span style=&#34;color:#75715e&#34;&gt;# Default fallback name&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#f92672&#34;&gt;weight&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;2&lt;/span&gt;                     &lt;span style=&#34;color:#75715e&#34;&gt;# Sorting weight&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;h3 id=&#34;configuration-options&#34;&gt;Configuration Options&lt;/h3&gt;
+&lt;p&gt;Each category in &lt;code&gt;categories.yaml&lt;/code&gt; supports these options:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;name&lt;/code&gt;: String or map of language codes to display names&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;weight&lt;/code&gt;: Integer for sorting (lower numbers appear first)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;notes&#34;&gt;Notes&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;Category keys in &lt;code&gt;categories.yaml&lt;/code&gt; must match the category names used in your content files&lt;/li&gt;
+&lt;li&gt;Weights are optional, defaulting to 100 if not specified&lt;/li&gt;
+&lt;li&gt;Categories are sorted by weight first, then by post count&lt;/li&gt;
+&lt;li&gt;For multilingual sites, always provide a &lt;code&gt;default&lt;/code&gt; name as fallback&lt;/li&gt;
+&lt;li&gt;Category names are case-insensitive in the configuration&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;example-usage-in-content&#34;&gt;Example Usage in Content&lt;/h3&gt;
+&lt;p&gt;When creating posts, use the lowercase category name in your front matter:&lt;/p&gt;
+&lt;div class=&#34;highlight-container&#34;&gt;
+
+  &lt;button class=&#34;copy-code-btn outline&#34;&gt;Copy&lt;/button&gt;
+
+  
+  &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-yaml&#34; data-lang=&#34;yaml&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;---
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;title&lt;/span&gt;: &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;My Post&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;categories&lt;/span&gt;: [
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;docs&amp;#34;&lt;/span&gt;,    &lt;span style=&#34;color:#75715e&#34;&gt;# Will display as &amp;#34;Documentation&amp;#34; based on categories.yaml&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;index&amp;#34;&lt;/span&gt;    &lt;span style=&#34;color:#75715e&#34;&gt;# Will display as &amp;#34;Computer Technology&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;]
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;---&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;h3 id=&#34;advanced-features&#34;&gt;Advanced Features&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;Flexible Language Support&lt;/strong&gt;: Add as many languages as needed in multilingual format&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Fallback System&lt;/strong&gt;: Uses default name if specific language is not found&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Weight-based Sorting&lt;/strong&gt;: Control category order in navigation&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;For more details, check the &lt;a href=&#34;https://github.com/your-theme/docs&#34;&gt;theme documentation&lt;/a&gt;.&lt;/p&gt;
+</description>
+      
+    </item>
+    
+    <item>
+      <title>How to Contribute</title>
+      <link>https://vlan101.net/post/docs/how-to-contribute/</link>
+      <pubDate>Sat, 15 Oct 2022 00:00:00 +0000</pubDate>
+      <author>stephen.santos@vlan101.net (Stephen Santos)</author>
+      <guid>https://vlan101.net/post/docs/how-to-contribute/</guid>
+      
+        <description>&lt;h2 id=&#34;contributing-to-jane&#34;&gt;Contributing to Jane&lt;/h2&gt;
+&lt;p&gt;There are many ways to contribute to the Jane theme: submitting pull requests, reporting issues, providing new translations, and creating suggestions.&lt;/p&gt;
+&lt;h2 id=&#34;build-and-run&#34;&gt;Build and Run&lt;/h2&gt;
+&lt;p&gt;If you want to understand how Jane works, you&amp;rsquo;ll want to get the source, build it, and run locally.&lt;/p&gt;
+&lt;h3 id=&#34;getting-the-sources&#34;&gt;Getting the sources&lt;/h3&gt;
+&lt;div class=&#34;highlight-container&#34;&gt;
+
+  &lt;button class=&#34;copy-code-btn outline&#34;&gt;Copy&lt;/button&gt;
+
+  
+  &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;git clone https://github.com/xianmin/hugo-theme-jane.git&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;h3 id=&#34;prerequisites&#34;&gt;Prerequisites&lt;/h3&gt;
+&lt;p&gt;You need install the &lt;code&gt;Hugo_extended&lt;/code&gt; version to use &lt;a href=&#34;https://gohugo.io/hugo-pipes/&#34;&gt;Hugo Pipes&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;We recommend that you use VSCode. And if you edit &lt;code&gt;.html&lt;/code&gt; files, recommend you install prettier and &lt;a href=&#34;https://github.com/NiklasPor/prettier-plugin-go-template&#34;&gt;prettier-plugin-go-template&lt;/a&gt; &lt;strong&gt;globally&lt;/strong&gt; . And open &lt;code&gt;Prettier: Resolve Global Modules&lt;/code&gt; in your VSCode Settings.&lt;/p&gt;
+&lt;div class=&#34;highlight-container&#34;&gt;
+
+  &lt;button class=&#34;copy-code-btn outline&#34;&gt;Copy&lt;/button&gt;
+
+  
+  &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;npm install -g prettier prettier-plugin-go-template&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;h3 id=&#34;watch-example-site&#34;&gt;Watch example Site&lt;/h3&gt;
+&lt;div class=&#34;highlight-container&#34;&gt;
+
+  &lt;button class=&#34;copy-code-btn outline&#34;&gt;Copy&lt;/button&gt;
+
+  
+  &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;hugo server --contentDir&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;./exampleSite/content&amp;#39;&lt;/span&gt; --config&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;dev-config.toml&amp;#39;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;h2 id=&#34;directory-structure&#34;&gt;Directory Structure&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;layouts/&lt;/code&gt; Stores templates in the form of .html files that specify how views of your content will be rendered into a static website.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;assets/&lt;/code&gt; stores all the scss &amp;amp; js &lt;strong&gt;source files&lt;/strong&gt;, &lt;code&gt;Hugo Pipes&lt;/code&gt; will bundle them to &lt;code&gt;resources/&lt;/code&gt; folder.&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+      
+    </item>
+    
+    <item>
+      <title>Getting Started with Hugo</title>
+      <link>https://vlan101.net/post/other/hugoisforlovers/</link>
+      <pubDate>Wed, 02 Apr 2014 00:00:00 +0000</pubDate>
+      <author>stephen.santos@vlan101.net (Stephen Santos)</author>
+      <guid>https://vlan101.net/post/other/hugoisforlovers/</guid>
+      
+        <description>&lt;h2 id=&#34;step-1-install-hugo&#34;&gt;Step 1. Install Hugo&lt;/h2&gt;
+&lt;p&gt;Goto &lt;a href=&#34;https://github.com/spf13/hugo/releases&#34;&gt;hugo releases&lt;/a&gt; and download the
+appropriate version for your os and architecture.&lt;/p&gt;
+&lt;p&gt;Save it somewhere specific as we will be using it in the next step.&lt;/p&gt;
+&lt;p&gt;More complete instructions are available at &lt;a href=&#34;https://vlan101.net/overview/installing/&#34;&gt;installing hugo&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;step-2-build-the-docs&#34;&gt;Step 2. Build the Docs&lt;/h2&gt;
+&lt;p&gt;Hugo has its own example site which happens to also be the documentation site
+you are reading right now.&lt;/p&gt;
+&lt;p&gt;Follow the following steps:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Clone the &lt;a href=&#34;https://github.com/gohugoio/hugo&#34;&gt;hugo repository&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Go into the repo&lt;/li&gt;
+&lt;li&gt;Run hugo in server mode and build the docs&lt;/li&gt;
+&lt;li&gt;Open your browser to http://localhost:1313&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Corresponding pseudo commands:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;git clone https://github.com/gohugoio/hugo
+cd hugo
+/path/to/where/you/installed/hugo server --source=./docs
+&amp;gt; 29 pages created
+&amp;gt; 0 tags index created
+&amp;gt; in 27 ms
+&amp;gt; Web Server is available at http://localhost:1313
+&amp;gt; Press ctrl+c to stop
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Once you&amp;rsquo;ve gotten here, follow along the rest of this page on your local build.&lt;/p&gt;
+&lt;h2 id=&#34;step-3-change-the-docs-site&#34;&gt;Step 3. Change the docs site&lt;/h2&gt;
+&lt;p&gt;Stop the Hugo process by hitting ctrl+c.&lt;/p&gt;
+&lt;p&gt;Now we are going to run hugo again, but this time with hugo in watch mode.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;/path/to/hugo/from/step/1/hugo server --source=./docs --watch
+&amp;gt; 29 pages created
+&amp;gt; 0 tags index created
+&amp;gt; in 27 ms
+&amp;gt; Web Server is available at http://localhost:1313
+&amp;gt; Watching for changes in /Users/spf13/Code/hugo/docs/content
+&amp;gt; Press ctrl+c to stop
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Open your &lt;a href=&#34;https://vim.spf13.com&#34;&gt;favorite editor&lt;/a&gt; and change one of the source
+content pages. How about changing this very file to &lt;em&gt;fix the typo&lt;/em&gt;. How about changing this very file to &lt;em&gt;fix the typo&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;Content files are found in &lt;code&gt;docs/content/&lt;/code&gt;. Unless otherwise specified, files
+are located at the same relative location as the url, in our case
+&lt;code&gt;docs/content/overview/quickstart.md&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;Change and save this file.. Notice what happened in your terminal.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;&amp;gt; Change detected, rebuilding site
+
+&amp;gt; 29 pages created
+&amp;gt; 0 tags index created
+&amp;gt; in 26 ms
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Refresh the browser and observe that the typo is now fixed.&lt;/p&gt;
+&lt;p&gt;Notice how quick that was. Try to refresh the site before it&amp;rsquo;s finished building.. I double dare you.
+Having nearly instant feedback enables you to have your creativity flow without waiting for long builds.&lt;/p&gt;
+&lt;h2 id=&#34;step-4-have-fun&#34;&gt;Step 4. Have fun&lt;/h2&gt;
+&lt;p&gt;The best way to learn something is to play with it.&lt;/p&gt;
+</description>
+      
+    </item>
+    
+  </channel>
+</rss>

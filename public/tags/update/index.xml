@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Update on vlan101.net - Rambling of a Network Engineer</title>
+    <link>https://vlan101.net/tags/update/</link>
+    <description>Recent content in Update on vlan101.net - Rambling of a Network Engineer</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <managingEditor>stephen.santos@vlan101.net (Stephen Santos)</managingEditor>
+    <webMaster>stephen.santos@vlan101.net (Stephen Santos)</webMaster>
+    <lastBuildDate>Fri, 20 Sep 2024 16:01:23 +0800</lastBuildDate>
+    
+        <atom:link href="https://vlan101.net/tags/update/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Jane Theme V3 Major Update</title>
+      <link>https://vlan101.net/post/jane-theme-v3-major-update/</link>
+      <pubDate>Fri, 20 Sep 2024 16:01:23 +0800</pubDate>
+      <author>stephen.santos@vlan101.net (Stephen Santos)</author>
+      <guid>https://vlan101.net/post/jane-theme-v3-major-update/</guid>
+      
+        <description>&lt;h2 id=&#34;update-content&#34;&gt;Update Content&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Use &lt;a href=&#34;https://picocss.com/&#34;&gt;Pico CSS&lt;/a&gt; as the color scheme, allowing theme color switching and dark/light mode toggle.&lt;/li&gt;
+&lt;li&gt;Customize Your Homepage.&lt;/li&gt;
+&lt;li&gt;Added STYLE SETTINGS, located at &lt;code&gt;/assets/sass/_settings.scss&lt;/code&gt; .&lt;/li&gt;
+&lt;li&gt;Deprecated the Category page, merging it into the Archive page.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Please note that due to the extensive modifications, some areas may still need refinement. I appreciate your understanding!&lt;/p&gt;
+&lt;h2 id=&#34;customize-your-homepage&#34;&gt;Customize Your Homepage&lt;/h2&gt;
+&lt;p&gt;Copy &lt;code&gt;/exampleSite/content/_index.md&lt;/code&gt; to your website&amp;rsquo;s &lt;code&gt;/content/_index.md&lt;/code&gt; and modify the parameters inside.&lt;/p&gt;
+&lt;p&gt;For multilingual sites, please create corresponding &lt;code&gt;_index.language.md&lt;/code&gt; files, such as &lt;code&gt;_index.zh-cn.md&lt;/code&gt; .&lt;/p&gt;
+&lt;h2 id=&#34;personalize-your-website&#34;&gt;Personalize Your Website&lt;/h2&gt;
+&lt;p&gt;Copy &lt;code&gt;/assets/sass/_settings.scss&lt;/code&gt; and &lt;code&gt;/assets/sass/_custom.scss&lt;/code&gt; to your website&amp;rsquo;s root directory (Note: maintain the same path and file names).&lt;/p&gt;
+&lt;p&gt;Modify variables in &lt;code&gt;_settings.scss&lt;/code&gt; and add custom styles in &lt;code&gt;/assets/sass/_custom.scss&lt;/code&gt;.&lt;/p&gt;
+&lt;h2 id=&#34;upgrading-to-v3&#34;&gt;Upgrading to v3&lt;/h2&gt;
+&lt;p&gt;The new version utilizes the latest Sass language features, requiring Dart Sass installation.&lt;/p&gt;
+&lt;p&gt;For installation guidance, refer to the official documentation: &lt;a href=&#34;https://gohugo.io/hugo-pipes/transpile-sass-to-css/#dart-sass&#34;&gt;https://gohugo.io/hugo-pipes/transpile-sass-to-css/#dart-sass&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;If you are using CI/CD automation tools, please remember to install Dart Sass as well: &lt;a href=&#34;https://gohugo.io/hugo-pipes/transpile-sass-to-css/#installing-in-a-production-environment&#34;&gt;https://gohugo.io/hugo-pipes/transpile-sass-to-css/#installing-in-a-production-environment&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Note: You may encounter compatibility issues after upgrading. If you face difficulties, please feel free to open an issue.&lt;/p&gt;
+&lt;h2 id=&#34;development-philosophy-of-this-theme&#34;&gt;Development Philosophy of This Theme&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;No &lt;code&gt;node_modules&lt;/code&gt; - fewer dependencies make maintenance easier.&lt;/li&gt;
+&lt;li&gt;Encourages users to modify the theme according to personal preferences for a more personalized website.&lt;/li&gt;
+&lt;li&gt;Reading Experience is the top priority.&lt;/li&gt;
+&lt;li&gt;Deploy once, focus on writing, no more hassle.&lt;/li&gt;
+&lt;/ol&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>Jane 主题 V3 大版本更新</title>
+      <link>https://vlan101.net/post/jane-theme-v3-major-update.zh-cn/</link>
+      <pubDate>Fri, 20 Sep 2024 16:01:23 +0800</pubDate>
+      <author>stephen.santos@vlan101.net (Stephen Santos)</author>
+      <guid>https://vlan101.net/post/jane-theme-v3-major-update.zh-cn/</guid>
+      
+        <description>&lt;h2 id=&#34;更新内容&#34;&gt;更新内容&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;使用 &lt;a href=&#34;https://picocss.com/&#34;&gt;Pico CSS&lt;/a&gt; 作为配色方案，可切换主题颜色，可切换 dark / light 模式。&lt;/li&gt;
+&lt;li&gt;可自定义 home page 展示内容。&lt;/li&gt;
+&lt;li&gt;添加 STYLE SETTINGS ，位于 /assets/sass/_settings.scss ；&lt;/li&gt;
+&lt;li&gt;弃用 Category 页面，合并到 Archive 页面。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;由于修改的地方比较多，还有很多地方不完善，请您谅解！&lt;/p&gt;
+&lt;h2 id=&#34;自定义你的主页&#34;&gt;自定义你的主页&lt;/h2&gt;
+&lt;p&gt;将 &lt;code&gt;/exampleSite/content/_index.md&lt;/code&gt; 复制到你的网站 &lt;code&gt;/content/_index.md&lt;/code&gt; ，修改里面的参数。&lt;/p&gt;
+&lt;p&gt;如果是多语言站点，请创建相应的 &lt;code&gt;_index.language.md&lt;/code&gt; , 比如 &lt;code&gt;_index.zh-cn.md&lt;/code&gt; 。&lt;/p&gt;
+&lt;h2 id=&#34;通过-style-settings-个性化你的网站&#34;&gt;通过 STYLE SETTINGS 个性化你的网站&lt;/h2&gt;
+&lt;p&gt;将 &lt;code&gt;/assets/sass/_settings.scss&lt;/code&gt; 和 &lt;code&gt;/assets/sass/_custom.scss&lt;/code&gt; 复制到你的网站根目录下（注意：路径名、文件名要一致）。&lt;/p&gt;
+&lt;p&gt;在 &lt;code&gt;_settings.scss&lt;/code&gt; 中修改变量，在 &lt;code&gt;/assets/sass/_custom.scss&lt;/code&gt; 中添加自定义样式。&lt;/p&gt;
+&lt;h2 id=&#34;从旧版本升级到-v3&#34;&gt;从旧版本升级到 v3&lt;/h2&gt;
+&lt;p&gt;由于新版本使用到了 Sass 语言的最新功能，需要安装 Dart Sass 。&lt;/p&gt;
+&lt;p&gt;安装指南见官方文档： &lt;a href=&#34;https://gohugo.io/hugo-pipes/transpile-sass-to-css/#dart-sass&#34;&gt;https://gohugo.io/hugo-pipes/transpile-sass-to-css/#dart-sass&lt;/a&gt; 。&lt;/p&gt;
+&lt;p&gt;如果你使用了 CI/CD 自动化工具，请记得同样要安装 Dart Sass: &lt;a href=&#34;https://gohugo.io/hugo-pipes/transpile-sass-to-css/#installing-in-a-production-environment&#34;&gt;https://gohugo.io/hugo-pipes/transpile-sass-to-css/#installing-in-a-production-environment&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;注意: 升级之后可能会遇到一些兼容性问题。如果遇到困难，欢迎提 issue。&lt;/p&gt;
+&lt;h2 id=&#34;这个主题的开发理念&#34;&gt;这个主题的开发理念&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;没有 &lt;code&gt;node_modules&lt;/code&gt; ，越少的依赖越容易维护；&lt;/li&gt;
+&lt;li&gt;鼓励使用者按照个人喜好修改主题，让网站更个性化；&lt;/li&gt;
+&lt;li&gt;阅读体验始终是最重要的；&lt;/li&gt;
+&lt;li&gt;一次部署，专心写作，不再折腾。&lt;/li&gt;
+&lt;/ol&gt;</description>
+      
+    </item>
+    
+  </channel>
+</rss>

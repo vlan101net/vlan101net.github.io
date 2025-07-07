@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Categories on vlan101.net - Rambling of a Network Engineer</title>
+    <link>https://vlan101.net/categories/</link>
+    <description>Recent content in Categories on vlan101.net - Rambling of a Network Engineer</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <managingEditor>stephen.santos@vlan101.net (Stephen Santos)</managingEditor>
+    <webMaster>stephen.santos@vlan101.net (Stephen Santos)</webMaster>
+    <lastBuildDate>Fri, 20 Sep 2024 16:01:23 +0800</lastBuildDate>
+    
+        <atom:link href="https://vlan101.net/categories/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+  </channel>
+</rss>
