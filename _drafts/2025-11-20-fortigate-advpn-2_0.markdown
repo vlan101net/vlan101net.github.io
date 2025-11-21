@@ -5,7 +5,7 @@ date:   2025-11-20 09:07:48 -0600
 categories: jekyll update
 ---
 
-
+![Diagram]({{site.url}}/assets/images/advpn_base.svg)
 
 ## Hub Configuration
 {% highlight fortios %}
