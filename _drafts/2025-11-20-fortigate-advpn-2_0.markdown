@@ -5,7 +5,18 @@ date:   2025-11-20 09:07:48 -0600
 categories: jekyll update
 ---
 
+Fortinet provides dynamic VPN functionality called ADVPN that allows for a site to be configured as a Hub, and all other sites are configured as Spokes.  This helps to simplify VPN configuration as all Spokes only need to be configured to communicate with the Hub and the Hub only needs configuration to listen for communication from the Spokes.  This greatly improves the ability to scale VPNs and not have to build individual VPNs between all sites.
+
+The added bonus is what are called shortcut paths.  When two spokes need to communicate with each other, the spokes can dynamically create a spoke-to-spoke VPN with no additional configuration.  This prevents all traffic from having to traverse through the Hub and addresses the scalability issues of very large full mesh VPN networks.
+
+
+## Network Diagram
+
+Here is the basic diagram of what we are working with.
+
+{:refdef: style="text-align: center;"}
 ![Diagram]({{site.url}}/assets/images/advpn_base.svg)
+{: refdef}
 
 ## Hub Configuration
 {% highlight fortios %}
