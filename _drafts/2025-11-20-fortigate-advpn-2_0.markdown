@@ -9,10 +9,9 @@ Fortinet provides dynamic VPN functionality called ADVPN that allows for a site 
 
 The added bonus is what are called shortcut paths.  When two spokes need to communicate with each other, the spokes can dynamically create a spoke-to-spoke VPN with no additional configuration.  This prevents all traffic from having to traverse through the Hub and addresses the scalability issues of very large full mesh VPN networks.
 
+For our example we will have a single Hub, you can have more that 1 Hub for resiliency, and 2 spokes.  Each location will have 2 Internet circuits so that we can also incorporate SD-WAN for a robust design.
 
 ## Network Diagram
-
-Here is the basic diagram of what we are working with.
 
 {:refdef: style="text-align: center;"}
 ![Diagram]({{site.url}}/assets/images/advpn_base.svg)
@@ -21,7 +20,7 @@ Here is the basic diagram of what we are working with.
 ## Hub Configuration
 {% highlight fortios %}
 config system settings
-    set location-id 198.51.100.4
+    set location-id 198.51.100.1
     set tcp-session-without-syn enable
     set allow-subnet-overlap enable
 end
@@ -29,7 +28,7 @@ end
 config system interface
     edit "Loopback0"
         set vdom "root"
-        set ip 198.51.100.4/32
+        set ip 198.51.100.1/32
         set allowaccess ping
         set type loopback
         set role lan
@@ -50,7 +49,7 @@ config vpn ipsec phase1-interface
         set dhgrp 14
         set psksecret key123!
         set dpd-retryinterval 5
-        set exchange-ip-addr4 198.51.100.4
+        set exchange-ip-addr4 198.51.100.1
         set add-route disable
     next
     edit "HUB-WAN2"
@@ -66,7 +65,7 @@ config vpn ipsec phase1-interface
         set dhgrp 14
         set psksecret key123!
         set dpd-retryinterval 5
-        set exchange-ip-addr4 198.51.100.4
+        set exchange-ip-addr4 198.51.100.1
         set add-route disable
     next
 end
@@ -91,13 +90,13 @@ config system sdwan
     end
     config members
         edit 1
-            set interface port1
-            set gateway 1.1.1.1
+            set interface wan1
+            set gateway 172.16.255.1
             set zone INET.Access
         next
         edit 2
-            set interface port2
-            set gateway 8.8.8.8
+            set interface wan2
+            set gateway 172.17.255.1
             set zone INET.Access
         next
         edit 3
@@ -115,7 +114,7 @@ config firewall policy
     edit 0
         set name "Loopback0.to.ADVPN"
         set srcintf Loopback0
-        set dstintf BRANCHES
+        set dstintf "BRANCHES"
         set action accept
         set srcaddr "all"
         set dstaddr "all"
@@ -124,8 +123,18 @@ config firewall policy
     next
     edit 0
         set name "ADVPN.to.Loopback0"
+        set srcintf "BRANCHES"
         set dstintf Loopback0
-        set srcintf BRANCHES
+        set action accept
+        set srcaddr "all"
+        set dstaddr "all"
+        set schedule "always"
+        set service "ALL"
+    next
+    edit 0
+        set name "Spoke.to.Spoke"
+        set srcintf "BRANCHES"
+        set dstintf "BRANCHES"
         set action accept
         set srcaddr "all"
         set dstaddr "all"
@@ -136,7 +145,7 @@ end
 
 config router bgp
     set as 65400
-    set router-id 198.51.100.4
+    set router-id 198.51.100.1
     set ibgp-multipath enable
     set recursive-next-hop enable
     set tag-resolve-mode merge
@@ -166,7 +175,7 @@ config router bgp
 end
 
 config router static
-    edit 0           
+    edit 0
         set dst 198.51.100.0 255.255.255.0
         set distance 252
         set blackhole enable
@@ -205,7 +214,7 @@ config vpn ipsec phase1-interface
         set auto-discovery-receiver enable
         set network-overlay enable
         set network-id 1
-        set remote-gw 1.1.1.2
+        set remote-gw 172.16.255.2
         set psksecret key123!
         set dpd-retryinterval 5
         set exchange-ip-addr4 198.51.100.2
@@ -223,7 +232,7 @@ config vpn ipsec phase1-interface
         set auto-discovery-receiver enable
         set network-overlay enable
         set network-id 2
-        set remote-gw 8.8.8.8.
+        set remote-gw  172.17.255.2
         set psksecret key123!
         set dpd-retryinterval 5
         set exchange-ip-addr4 198.51.100.2
@@ -253,41 +262,11 @@ config router prefix-list
             next
         end
     next
-    edit ATL-NETS
+    edit LOCAL-NETS
         config rule
             edit 0
                 set action permit
-                set prefix 10.2.10.0/24
-                unset le
-                unset ge
-            next
-            edit 0
-                set action permit
-                set prefix 10.93.6.0/24
-                unset le
-                unset ge
-            next
-            edit 0
-                set action permit
-                set prefix 10.93.60.0/24
-                unset le
-                unset ge
-            next
-            edit 0
-                set action permit
-                set prefix 10.93.61.0/24
-                unset le
-                unset ge
-            next
-            edit 0
-                set action permit
-                set prefix 10.6.0.0/16
-                set le 32
-                unset ge
-            next
-            edit 0
-                set action permit
-                set prefix 10.2.0.0/16
+                set prefix 10.1.0.0/16
                 set le 32
                 unset ge
             next
@@ -306,7 +285,7 @@ config router route-map
     edit "ADVPN-OUT"
         config rule
             edit 1
-                set match-ip-address "ATL-NETS"
+                set match-ip-address "LOCAL-NETS"
             next
             edit 2
                 set match-ip-address "LOOPBACK-ADDR"
@@ -322,7 +301,7 @@ config router bgp
     set recursive-next-hop enable
     set tag-resolve-mode merge
     config neighbor
-        edit "198.51.100.4"
+        edit "198.51.100.1"
             set soft-reconfiguration enable
             set capability-graceful-restart enable
             set advertisement-interval 1
@@ -358,11 +337,12 @@ config system sdwan
     config members
         edit 1
             set interface wan1
-            set gateway 4.4.4.4
+            set gateway 172.16.254.1
             set zone INET.Access
         next
         edit 2
             set interface wan2
+            set gateway 172.17.254.1
             set zone INET.Access
         next
         edit 3
@@ -376,7 +356,7 @@ config system sdwan
     end
     config health-check
         edit "HUB.MONITOR"
-            set server 10.4.11.1
+            set server 10.0.0.1
             set embed-measured-health enable
             set source 198.51.100.2
             set members 3 4
@@ -395,7 +375,7 @@ config firewall policy
     edit 0
         set name "Loopback0.to.ADVPN"
         set srcintf Loopback0
-        set dstintf ADVPN
+        set dstintf "ADVPN"
         set action accept
         set srcaddr "all"
         set dstaddr "all"
@@ -405,7 +385,27 @@ config firewall policy
     edit 0
         set name "ADVPN.to.Loopback0"
         set dstintf Loopback0
-        set srcintf ADVPN
+        set srcintf "ADVPN"
+        set action accept
+        set srcaddr "all"
+        set dstaddr "all"
+        set schedule "always"
+        set service "ALL"
+    next
+    edit 0
+        set name "LAN.to.ADVPN"
+        set srcintf "LAN"
+        set dstintf "ADVPN"
+        set action accept
+        set srcaddr "all"
+        set dstaddr "all"
+        set schedule "always"
+        set service "ALL"
+    next
+    edit 0
+        set name "ADVPN.to.LAN"
+        set srcintf "ADVPN"
+        set dstintf "LAN"
         set action accept
         set srcaddr "all"
         set dstaddr "all"
